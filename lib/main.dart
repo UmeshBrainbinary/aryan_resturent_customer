@@ -18,6 +18,7 @@ final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
 final box = GetStorage();
 dynamic langValue = const Locale('en', null);
 
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
