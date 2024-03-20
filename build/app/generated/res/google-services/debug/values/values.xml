@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">843456771665-pi46ra110f1t774nipad865tclh79e5g.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">843456771665</string>
+    <string name="google_api_key" translatable="false">AIzaSyBHkY58zN2KjNKUN6fomyXT_c-2c0jXROg</string>
+    <string name="google_app_id" translatable="false">1:843456771665:android:3540599d5900f4c3582a70</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBHkY58zN2KjNKUN6fomyXT_c-2c0jXROg</string>
+    <string name="google_storage_bucket" translatable="false">foodking-inilabs.appspot.com</string>
+    <string name="project_id" translatable="false">foodking-inilabs</string>
+</resources>
