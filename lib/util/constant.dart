@@ -133,8 +133,8 @@ class Images {
   static String get iconTimeline => 'assets/icons/timeline.svg';
   static String get iconTrash => 'assets/icons/trash.svg';
   static String get iconEditProfile => 'assets/icons/edit_profile.svg';
-  static String get emptyCart => 'assets/images/empty_cart.png';
-  static String get lostConnection => 'assets/images/lost_connection.png';
+  static String get emptyCart => 'assets/images/carts.png';
+  static String get lostConnection => 'assets/images/lost_connection.png';//lost connection
   static String get searchNotFound => 'assets/images/noitems.svg';
   static String get marker => 'assets/images/marker_user.png';
   static String get markerBranch => 'assets/images/marker_branch.png';
