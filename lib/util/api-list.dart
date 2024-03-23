@@ -1,7 +1,7 @@
 // ignore_for_file: file_names
 
 class APIList {
-  static String? mapApiKey = "AIzaSyB3S4fcKMcU-Ll9RSPkCiwdk1jXPmrTC_c";
+  static String? mapApiKey = "AIzaSyButRSRA8K6bFAPzT0XzV8cwZaOy4gY6hs";
   static String? licenseCode = "oCuk7wuk4eSmEhbq13dfv34df";
   static String? baseUrl = "https://restaurant.webheaydemo.com";
   // static String? baseUrl = "https://demo.foodking.dev";

@@ -69,9 +69,13 @@ class LocationSearchDialog extends StatelessWidget {
                     .setLocation(suggestion.placeId!, suggestion.description!,
                         mapController!);
                 Get.back(result: _position);
+                print('suggetion=====$suggestion');
               },
-            )),
+
+            ),
+        ),
       ),
     );
   }
+
 }
