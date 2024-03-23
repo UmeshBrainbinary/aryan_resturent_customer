@@ -19,13 +19,14 @@ class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
     //for foreground state
+
+    super.initState();
     Timer(
-      const Duration(seconds: 10),
-      () {
+      const Duration(milliseconds: 1500),
+          () {
         Get.offAll(() => const DashboardView());
       },
     );
-    super.initState();
   }
 
   @override

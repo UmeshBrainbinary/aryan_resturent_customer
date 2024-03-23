@@ -31,7 +31,6 @@ class MenuuController extends GetxController {
   @override
   void onInit() {
     getCategoryList();
-
     super.onInit();
   }
 

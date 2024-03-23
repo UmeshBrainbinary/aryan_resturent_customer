@@ -107,7 +107,6 @@ class AddressController extends GetxController {
       update();
     }
   }
-
   getCurrentLocation() async {
     try {
       Geolocator.requestPermission();
@@ -190,6 +189,7 @@ class AddressController extends GetxController {
     if (text != null && text.isNotEmpty) {
       http.Response response = await getLocationData(text);
       var data = jsonDecode(response.body.toString());
+      print('response========${response.body}');
       isLoading = true;
       if (data['status'] == 'OK') {
         predictionList = [];
