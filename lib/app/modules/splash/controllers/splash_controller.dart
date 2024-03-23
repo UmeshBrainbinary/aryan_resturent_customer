@@ -1,8 +1,11 @@
 // ignore_for_file: body_might_complete_normally_nullable
 
+import 'dart:async';
 import 'dart:convert';
 import 'package:ariyanrestaurant/app/data/model/response/language_model.dart';
+import 'package:ariyanrestaurant/app/modules/dashboard/views/dashboard_view.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 import 'package:get_storage/get_storage.dart';
 import '../../../../util/api-list.dart';
@@ -34,9 +37,10 @@ class SplashController extends GetxController {
 
   @override
   void onInit() {
-    getConfiguration();
-    getPageData();
-    getLanguageData();
+
+   // getConfiguration();
+   // getPageData();
+   // getLanguageData();
     super.onInit();
   }
 
@@ -47,6 +51,7 @@ class SplashController extends GetxController {
           .getRequestWithoutToken(endPoint: APIList.configuration)
           .then((response) {
         if (response != null && response.statusCode == 200) {
+          print('response==============>${response.body}');
           final jsonResponse = json.decode(response.body);
           configModel = ConfigModel.fromJson(jsonResponse);
           configData = configModel.data!;
@@ -77,6 +82,7 @@ class SplashController extends GetxController {
           .getRequestWithoutToken(endPoint: APIList.countryInfo! + countryCode)
           .then((response) {
         if (response != null && response.statusCode == 200) {
+          print('response===============???${response.body}');
           final jsonResponse = json.decode(response.body);
           countryInfo = CountryInfo.fromJson(jsonResponse);
           countryInfoData = countryInfo.data!;
@@ -101,6 +107,7 @@ class SplashController extends GetxController {
           .getRequestWithoutToken(endPoint: APIList.pages!)
           .then((response) {
         if (response != null && response.statusCode == 200) {
+          print('response==============>>>${response.body}');
           final jsonResponse = json.decode(response.body);
           pageModelData = PageModel.fromJson(jsonResponse);
           return pageModelData;
