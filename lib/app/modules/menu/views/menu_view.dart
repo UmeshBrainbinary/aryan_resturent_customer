@@ -1,6 +1,7 @@
 // ignore_for_file: must_be_immutable, sort_child_properties_last, deprecated_member_use
 
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -58,99 +59,83 @@ class _MenuViewState extends State<MenuView> {
     return GetBuilder<MenuuController>(
       builder: (menuController) => Scaffold(
         backgroundColor: Colors.white,
-        appBar: widget.fromHome!
-            ? AppBar(
-                leadingWidth: 150.w,
-
-                leading: Row(
-                  children: [
-                    IconButton(
-                      icon: SvgPicture.asset(
-                        Images.back,
-                        height: 25.h,
-                        width: 25.w,
-                        color: AppColor.primaryColor,
-                      ),
-                      onPressed: () {
-                        Get.back();
-                      },
-                    ),
-                    SizedBox(
-                      width: 5.w,
-                    ),
-                    Image.asset(
-                      Images.logo,
-                      width: 85.w,
-                      // height: 16.h,
-                    ),
-                  ],
-                ),
-                // title: Image.asset(
-                //   Images.logo,
-                //   width: 85.w,
-                //   height: 16.h,
-                // ),
-                actions: [
-                  Padding(
-                    padding: EdgeInsets.only(top: 8.h, right: 16.w, left: 16.w),
-                    child: SizedBox(
-                      height: 25.h,
-                      width: 25.w,
-                      child: InkWell(
-                        splashColor: Colors.transparent,
-                        onTap: () {
-                          Get.to(() => const SearchView());
-                        },
-                        child: SvgPicture.asset(
-                          Images.iconSearch,
-                          fit: BoxFit.contain,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-
-                elevation: 0,
-                backgroundColor: Colors.white,
-              )
-            : AppBar(
-                leadingWidth: 100.w,
-                title: SizedBox(
-                  height: 100.h,
-                  child: Image.asset(
-                    Images.logo,
-                    fit: BoxFit.contain,
-                  ),
-                ),
-                actions: [
-                  Padding(
-                    padding: EdgeInsets.only(top: 8.h, right: 16.w, left: 16.w),
-                    child: SizedBox(
-                      height: 25.h,
-                      width: 25.w,
-                      child: InkWell(
-                        splashColor: Colors.transparent,
-                        onTap: () {
-                          Get.to(() => const SearchView());
-                        },
-                        child: SvgPicture.asset(
-                          Images.iconSearch,
-                          fit: BoxFit.contain,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-                centerTitle: false,
-                elevation: 0,
-                backgroundColor: Colors.white,
-              ),
+        // appBar: AppBar(
+        //   leadingWidth: 120.w,
+        //   leading: Row(
+        //     children: [
+        //       SizedBox(
+        //         width: 20.w,
+        //       ),
+        //       Image.asset(
+        //         Images.logo,
+        //
+        //         // height: 16.h,
+        //       ),
+        //     ],
+        //   ),
+        //   // title: Image.asset(
+        //   //   Images.logo,
+        //   //   width: 85.w,
+        //   //   height: 16.h,
+        //   // ),
+        //   actions: [
+        //     Padding(
+        //       padding: EdgeInsets.only(top: 8.h, right: 16.w, left: 16.w),
+        //       child: SizedBox(
+        //         height: 25.h,
+        //         width: 25.w,
+        //         child: InkWell(
+        //           splashColor: Colors.transparent,
+        //           onTap: () {
+        //             Get.to(() => const SearchView());
+        //           },
+        //           child: SvgPicture.asset(
+        //             Images.iconSearch,
+        //             fit: BoxFit.contain,
+        //           ),
+        //         ),
+        //       ),
+        //     ),
+        //   ],
+        //   centerTitle: false,
+        //   elevation: 0,
+        //   backgroundColor: Colors.white,
+        // ),
         body: Stack(
           children: [
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 16.w),
               child: Column(
                 children: [
+                  SizedBox(height: 22.5,),
+                  Row(
+                    children: [
+                      SizedBox(
+                        height: 93.h,
+                        child: Image.asset(
+                          Images.logo,fit: BoxFit.contain,
+                        ),
+                      ),
+                      Spacer(),
+                      Padding(
+                        padding: EdgeInsets.only(top: 8.h, right: 16.w, left: 16.w),
+                        child: SizedBox(
+                          height: 30.h,
+                          width: 30.w,
+                          child: InkWell(
+                            splashColor: Colors.transparent,
+                            onTap: () {
+                              Get.to(() => const SearchView());
+                            },
+                            child: SvgPicture.asset(
+                              Images.iconSearch,
+                              fit: BoxFit.contain,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                   SizedBox(
                     height: 20.h,
                   ),
@@ -178,9 +163,6 @@ Widget menuSection(bool fromHome, int categoryId) {
   return GetBuilder<MenuuController>(
     builder: (menuController) => Column(
       children: [
-        SizedBox(
-          height: 12.h,
-        ),
         SizedBox(
           width: double.infinity,
           height: 80.h,

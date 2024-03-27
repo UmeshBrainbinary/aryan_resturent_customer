@@ -999,7 +999,7 @@ class _StatusViewViewState extends State<OrderDetailsView> {
                                                   children: [
                                                     Text(
                                                       "ARE_YOU_SURE_TO_CANCEL_THIS_ORDER"
-                                                          .tr
+
                                                           .tr,
                                                       textAlign:
                                                           TextAlign.center,

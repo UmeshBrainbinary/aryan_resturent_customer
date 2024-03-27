@@ -70,12 +70,11 @@ class _HomeViewState extends State<HomeView> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             SizedBox(
-                              height: 100.h,
+                              height: 93.h,
                               child: Image.asset(
                                 Images.logo,fit: BoxFit.contain,
                               ),
                             ),
-                            Spacer(),
                             homeController.loader
                                 ? Shimmer.fromColors(
                               baseColor: Colors.grey[200]!,
@@ -244,7 +243,7 @@ class _HomeViewState extends State<HomeView> {
                                                             .categoryDataList.isEmpty
                                                     ? menuSectionShimmer()
                                                     : homeMenuSection(),
-                        
+
                                                 homeController.featuredLoader ||
                                                         homeController
                                                             .featuredItemDataList
@@ -258,7 +257,7 @@ class _HomeViewState extends State<HomeView> {
                                                             .lodear
                                                     ? const SizedBox.shrink()
                                                     : homeOfferSection(),
-                        
+
                                                 homeController.popularLoader ||
                                                         homeController
                                                             .popularItemDataList

@@ -54,7 +54,7 @@ class _PhoneNumberViewState extends State<PhoneNumberView> {
                     ),
                     Image.asset(
                       Images.logo,
-                      height: 90.h,
+                      height: 93.h,
                       fit: BoxFit.contain,
                     ),
                     SizedBox(

@@ -46,7 +46,6 @@ class AppColor {
 
 class Images {
   static String get logo => 'assets/images/Ariyan Restaurant logo.png';
-  static String get appLogo => 'assets/images/app_logo.png';
   static String get splashLogo => 'assets/images/Ariyan Restaurant Splesh.png';
   static String get splashTop => 'assets/images/splesh-top.png';
   static String get splashBot => 'assets/images/SpleshBottom.png';
