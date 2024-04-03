@@ -17,6 +17,9 @@ Widget homeMenuSection() {
     builder: (menuController) => Column(
       children: [
         SizedBox(
+          height: 5,
+        ),
+        SizedBox(
           child:
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
             Text(

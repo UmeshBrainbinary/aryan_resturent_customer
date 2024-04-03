@@ -5,12 +5,14 @@ import '../../../data/model/response/branch_model.dart';
 import '../../../data/model/response/category_model.dart';
 import '../../../data/model/response/item_model.dart';
 import '../../../data/model/response/order_mode.dart';
+import '../../../data/model/response/slider_model.dart';
 import '../../../data/repository/branch_repo.dart';
 import '../../../data/repository/category_repo.dart';
 import '../../../data/repository/featured_item_repo.dart';
 import '../../../data/repository/item_repo.dart';
 import '../../../data/repository/my_order_repo.dart';
 import '../../../data/repository/popular_item_repo.dart';
+import '../../../data/repository/slider_repo.dart';
 
 class HomeController extends GetxController {
   static Server server = Server();
@@ -20,10 +22,14 @@ class HomeController extends GetxController {
   List<ItemData> popularItemDataList = <ItemData>[];
   List<ItemData> featuredItemDataList = <ItemData>[];
   List<BranchData> branchDataList = <BranchData>[];
+  List<Datum> sliderAds = <Datum>[];
+  RxInt currentImageIndex = 0.obs;
+
 
   String? selectedBranch;
   int? selectedbranchId;
 
+  bool sliderloder = false;
   bool loader = false;
   bool menuLoader = false;
   bool featuredLoader = false;
@@ -35,17 +41,31 @@ class HomeController extends GetxController {
   @override
   void onInit() {
     final box = GetStorage();
+    fetchSliderAds();
     getCategoryList();
     getBranchList();
     getPopularItemDataList();
     getFeaturedItemDataList();
     getItemDataList();
+
     if (box.read('isLogedIn') == true && box.read('isLogedIn') != null) {
       getActiveOrderList();
     }
     super.onInit();
   }
-
+  void fetchSliderAds() async {
+    try {
+      final ads = await ApiService.fetchSliderAds();
+      sliderAds.assignAll(ads);
+    } catch (e) {
+      print('Error: $e');
+    } finally {
+      sliderloder= false;
+    }
+  }
+  void changeImageIndex(int newIndex) {
+    currentImageIndex.value = newIndex;
+  }
   setIndexOfBranch() {
     selectedBranchIndex =
         branchDataList.indexWhere((e) => e.name == selectedBranch);

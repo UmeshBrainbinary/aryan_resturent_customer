@@ -24,7 +24,7 @@ dependencies:
   dropdown_button2: ^1.9.1
   flutter_chat_ui: ^1.6.6
   shimmer: ^2.0.0
-  cached_network_image: ^3.2.3
+  cached_network_image: ^3.3.1
   google_maps_flutter: ^2.2.5
   geolocator: ^9.0.2
   geocoding: ^2.1.0
@@ -48,7 +48,7 @@ dependencies:
   path_provider: ^2.0.14
   map_launcher: ^2.5.0+1
   easy_stepper: ^0.5.2+1
-  flutter_html: 
+  flutter_html:
 
   flutter: 
     sdk: flutter
