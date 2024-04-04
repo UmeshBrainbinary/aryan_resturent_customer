@@ -4,6 +4,36 @@ import 'package:shimmer/shimmer.dart';
 
 import '../../../../util/constant.dart';
 
+Widget sliderSectionShimmer() {
+  return Column(
+    children: [
+      SizedBox(
+        height: 20.h,
+      ),
+      Shimmer.fromColors(
+        baseColor: Colors.grey[200]!,
+        highlightColor: Colors.grey[300]!,
+        child: SizedBox(
+          height: 130,
+          child: ListView.builder(
+            itemCount: 3,
+            itemBuilder: (context, index) {
+              return ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: Container(
+                  width: double.infinity,
+                  height: 130,
+                  color: Colors.white,
+                ),
+              );
+            },
+          ),
+        ),
+      ),
+    ],
+  );
+}
+
 Widget menuSectionShimmer() {
   return Column(
     children: [

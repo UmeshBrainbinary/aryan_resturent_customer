@@ -15,6 +15,7 @@ class StepperWidgetDelivery extends StatefulWidget {
 
 class _Stepper extends State<StepperWidgetDelivery> {
   final orderController = Get.put(OrderController());
+
   @override
   void initState() {
     super.initState();
@@ -47,8 +48,14 @@ class _Stepper extends State<StepperWidgetDelivery> {
                 customStep: ClipRRect(
                   borderRadius: BorderRadius.circular(15),
                   child: orderController.orderDetailsData.value.status! == 1
-                      ? SvgPicture.asset(Images.tick)
-                      : SvgPicture.asset(Images.roundStepper),
+                      ? SvgPicture.asset(
+                          Images.tick,
+                          color: Color(0xffED1C24),
+                        )
+                      : SvgPicture.asset(
+                          Images.roundStepper,
+                          color: Color(0xffED1C24),
+                        ),
                 ),
                 customTitle: Text("ORDER_PLACED".tr,
                     textAlign: TextAlign.center,

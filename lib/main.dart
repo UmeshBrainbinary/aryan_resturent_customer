@@ -18,6 +18,7 @@ final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
 final box = GetStorage();
 dynamic langValue = const Locale('en', null);
 
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -59,3 +60,17 @@ void main() async {
     ),
   );
 }
+/*User
+import UIKit
+import Flutter
+
+@UIApplicationMain
+@objc class AppDelegate: FlutterAppDelegate {
+  override func application(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+  ) -> Bool {
+    GeneratedPluginRegistrant.register(with: self)
+    return super.application(application, didFinishLaunchingWithOptions: launchOptions)
+  }
+}*/

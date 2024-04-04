@@ -78,7 +78,7 @@ class _SignupViewState extends State<SignupView> {
                       ),
                       Image.asset(
                         Images.logo,
-                        height: 90.h,
+                        height: 93.h,
                         fit: BoxFit.contain,
                       ),
                       SizedBox(

@@ -14,7 +14,7 @@
 
 
    <application
-        android:label="AriyanRestaurant"
+        android:label="Ariyan Restaurant"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
@@ -50,7 +50,7 @@
 
            <!-- TODO: Add your Google Maps API key here -->
         <meta-data android:name="com.google.android.geo.API_KEY"
-               android:value="AIzaSyB3S4fcKMcU-Ll9RSPkCiwdk1jXPmrTC_c"/>
+               android:value="AIzaSyButRSRA8K6bFAPzT0XzV8cwZaOy4gY6hs"/>
         
     </application>
     <queries>

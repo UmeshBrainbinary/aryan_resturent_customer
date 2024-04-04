@@ -49,7 +49,7 @@ class _ResetPasswordViewState extends State<ResetPasswordView> {
                     ),
                     Image.asset(
                       Images.logo,
-                      height: 80.h,
+                      height: 93.h,
                       fit: BoxFit.contain,
                     ),
                     SizedBox(

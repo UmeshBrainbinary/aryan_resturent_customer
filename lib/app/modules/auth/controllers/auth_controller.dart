@@ -109,7 +109,6 @@ class AuthController extends GetxController {
       debugPrint(e.toString());
     }
   }
-
   Future phoneNumberSignUp(phoneNumber) async {
     loader = true;
     update();
