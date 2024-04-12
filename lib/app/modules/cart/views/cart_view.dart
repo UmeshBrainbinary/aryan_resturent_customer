@@ -26,7 +26,8 @@ class _CartViewState extends State<CartView> {
   Widget build(BuildContext context) {
     SplashController splashController = Get.put(SplashController());
     return GetBuilder<CartController>(
-      builder: (cartController) => (Scaffold(
+      builder: (cartController) => (
+          Scaffold(
         backgroundColor: Colors.white,
         appBar: widget.fromNav!
             ? AppBar(
@@ -43,12 +44,12 @@ class _CartViewState extends State<CartView> {
                         child: ToggleSwitch(
                           minWidth: 90.w,
                           cornerRadius: 20.r,
-                          activeBgColors: const [
-                            [AppColor.delivaryActive],
-                            [AppColor.delivaryActive],
+                          activeBgColors:  const [
+                            [AppColor.primaryColor],
+                            [AppColor.primaryColor],
                           ],
                           activeFgColor: Colors.white,
-                          inactiveBgColor: AppColor.delivaryInactive,
+                          inactiveBgColor: AppColor.primaryColor.withOpacity(0.3),
                           inactiveFgColor: Colors.white,
                           initialLabelIndex: 0,
                           customTextStyles: [fontMediumProWhite],
@@ -70,10 +71,10 @@ class _CartViewState extends State<CartView> {
                           minWidth: 90.w,
                           cornerRadius: 20.r,
                           activeBgColors: const [
-                            [AppColor.delivaryActive],
+                            [AppColor.primaryColor],
                           ],
                           activeFgColor: Colors.white,
-                          inactiveBgColor: AppColor.delivaryInactive,
+                          inactiveBgColor: AppColor.primaryColor.withOpacity(0.3),
                           inactiveFgColor: Colors.white,
                           initialLabelIndex: 0,
                           customTextStyles: [fontMediumProWhite],
@@ -95,10 +96,10 @@ class _CartViewState extends State<CartView> {
                           minWidth: 90.w,
                           cornerRadius: 20.r,
                           activeBgColors: const [
-                            [AppColor.delivaryActive],
+                            [AppColor.primaryColor],
                           ],
                           activeFgColor: Colors.white,
-                          inactiveBgColor: AppColor.delivaryInactive,
+                          inactiveBgColor: AppColor.primaryColor.withOpacity(0.3),
                           inactiveFgColor: Colors.white,
                           initialLabelIndex: 0,
                           customTextStyles: [fontMediumProWhite],
@@ -133,12 +134,12 @@ class _CartViewState extends State<CartView> {
                         child: ToggleSwitch(
                           minWidth: 90.w,
                           cornerRadius: 20.r,
-                          activeBgColors: const [
-                            [AppColor.delivaryActive],
-                            [AppColor.delivaryActive],
+                          activeBgColors:  const [
+                            [AppColor.primaryColor],
+                            [AppColor.primaryColor],
                           ],
                           activeFgColor: Colors.white,
-                          inactiveBgColor: AppColor.delivaryInactive,
+                          inactiveBgColor: AppColor.primaryColor.withOpacity(0.3),
                           inactiveFgColor: Colors.white,
                           initialLabelIndex: 0,
                           customTextStyles: [fontMediumProWhite],
@@ -160,10 +161,10 @@ class _CartViewState extends State<CartView> {
                           minWidth: 90.w,
                           cornerRadius: 20.r,
                           activeBgColors: const [
-                            [AppColor.delivaryActive],
+                            [AppColor.primaryColor],
                           ],
                           activeFgColor: Colors.white,
-                          inactiveBgColor: AppColor.delivaryInactive,
+                          inactiveBgColor: AppColor.primaryColor.withOpacity(0.3),
                           inactiveFgColor: Colors.white,
                           initialLabelIndex: 0,
                           customTextStyles: [fontMediumProWhite],
@@ -185,10 +186,10 @@ class _CartViewState extends State<CartView> {
                           minWidth: 90.w,
                           cornerRadius: 20.r,
                           activeBgColors: const [
-                            [AppColor.delivaryActive],
+                            [AppColor.primaryColor],
                           ],
                           activeFgColor: Colors.white,
-                          inactiveBgColor: AppColor.delivaryInactive,
+                          inactiveBgColor: AppColor.primaryColor.withOpacity(0.3),
                           inactiveFgColor: Colors.white,
                           initialLabelIndex: 0,
                           customTextStyles: [fontMediumProWhite],

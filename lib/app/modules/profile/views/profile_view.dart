@@ -351,26 +351,22 @@ class _ProfileViewState extends State<ProfileView> {
                           GetBuilder<SplashController>(
                             builder: (splashController) => SizedBox(
                               child: ListView.builder(
-                                  padding: EdgeInsets.symmetric(vertical: 8.h),
+                                  padding: EdgeInsets.zero,
                                   shrinkWrap: true,
                                   physics: const NeverScrollableScrollPhysics(),
-                                  itemCount:
-                                      splashController.pageDataList.length,
+                                  itemCount: splashController.pageDataList.length,
                                   itemBuilder: (BuildContext context, index) {
-                                    return Padding(
-                                      padding: EdgeInsets.only(bottom: 12.h),
-                                      child: profileItem(
-                                          PagesScreen(
-                                            description: splashController
-                                                .pageDataList[index]
-                                                .description,
-                                            tittle: splashController
-                                                .pageDataList[index].title,
-                                          ),
-                                          Images.terms_condition,
-                                          splashController
-                                              .pageDataList[index].title),
-                                    );
+                                    return profileItem(
+                                        PagesScreen(
+                                          description: splashController
+                                              .pageDataList[index]
+                                              .description,
+                                          tittle: splashController
+                                              .pageDataList[index].title,
+                                        ),
+                                        Images.terms_condition,
+                                        splashController
+                                            .pageDataList[index].title);
                                   }),
                             ),
                           ),

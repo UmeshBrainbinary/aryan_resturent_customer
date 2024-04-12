@@ -387,7 +387,7 @@ Widget previousOrders() {
             'PREVIOUS_ORDERS'.tr,
             style: TextStyle(
                 fontSize: 18.sp,
-                color: AppColor.activeTxtColor,
+                color: AppColor.primaryColor,
                 fontWeight: FontWeight.w600),
           ),
         ),
@@ -429,6 +429,7 @@ Widget previousOrders() {
                                       width: 32.w,
                                       height: 32.h,
                                       fit: BoxFit.cover,
+                                      color: AppColor.primaryColor,
                                     ),
                                     SizedBox(
                                       width: 10.w,
@@ -574,7 +575,7 @@ Widget previousOrders() {
                                                       fontWeight:
                                                           FontWeight.w400,
                                                       color: AppColor
-                                                          .activeTxtColor),
+                                                          .primaryColor),
                                                 )
                                               : Text(
                                                   "Takeaway".tr,

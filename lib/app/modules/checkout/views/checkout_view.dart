@@ -487,10 +487,7 @@ class _CheckoutViewState extends State<CheckoutView> {
                                                           onTap: () {
                                                             Get.to(() =>
                                                                 EditPickLocationView(
-                                                                  addressData: addressController
-                                                                          .addressDataList[
-                                                                      addressController
-                                                                          .selectedAddress!],
+                                                                  addressData: addressController.addressDataList[addressController.selectedAddress!],
                                                                 ));
                                                           },
                                                           child: Row(
@@ -1082,12 +1079,14 @@ class _CheckoutViewState extends State<CheckoutView> {
                                         minWidth: 90.w,
                                         cornerRadius: 20.r,
                                         activeBgColors: const [
-                                          [AppColor.delivaryActive],
-                                          [AppColor.delivaryActive],
+                                          // [AppColor.delivaryActive],
+                                          // [AppColor.delivaryActive],
+                                          [AppColor.primaryColor],
+                                          [AppColor.primaryColor],
                                         ],
                                         activeFgColor: Colors.white,
                                         inactiveBgColor:
-                                            AppColor.delivaryInactive,
+                                            AppColor.primaryColor.withOpacity(0.3),
                                         inactiveFgColor: Colors.white,
                                         initialLabelIndex:
                                             cartController.orderTypeIndex,
@@ -1120,11 +1119,11 @@ class _CheckoutViewState extends State<CheckoutView> {
                                         minWidth: 90.w,
                                         cornerRadius: 20.r,
                                         activeBgColors: const [
-                                          [AppColor.delivaryActive],
+                                          [AppColor.primaryColor],
                                         ],
                                         activeFgColor: Colors.white,
                                         inactiveBgColor:
-                                            AppColor.delivaryInactive,
+                                        AppColor.primaryColor.withOpacity(0.3),
                                         inactiveFgColor: Colors.white,
                                         initialLabelIndex:
                                             cartController.orderTypeIndex,
@@ -1148,11 +1147,11 @@ class _CheckoutViewState extends State<CheckoutView> {
                                         minWidth: 90.w,
                                         cornerRadius: 20.r,
                                         activeBgColors: const [
-                                          [AppColor.delivaryActive],
+                                          [AppColor.primaryColor],
                                         ],
                                         activeFgColor: Colors.white,
                                         inactiveBgColor:
-                                            AppColor.delivaryInactive,
+                                        AppColor.primaryColor.withOpacity(0.3),
                                         inactiveFgColor: Colors.white,
                                         initialLabelIndex:
                                             cartController.orderTypeIndex,
@@ -1630,7 +1629,7 @@ Widget cartSummarySection(context) {
                   return Column(
                     children: [
                       SizedBox(
-                        height: 65.h,
+                        height: 70.h,
                         child: Row(children: [
                           Stack(
                             children: [

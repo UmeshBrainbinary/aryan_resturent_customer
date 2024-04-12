@@ -154,6 +154,7 @@ class _HomeViewState extends State<HomeView> {
                       Expanded(
                         child: Stack(
                           children: [
+
                             Padding(
                               padding: homeController.activeOrderData.isEmpty ||
                                       box.read('isLogedIn') == false
@@ -297,6 +298,7 @@ class _HomeViewState extends State<HomeView> {
                                 ],
                               ),
                             ),
+
                             if (homeController.activeOrderData.isNotEmpty &&
                                 box.read('isLogedIn') == true)
                               const ActiveOrderStatus()

@@ -69,6 +69,7 @@ class _ApplyOfferCardState extends State<ApplyOfferCard> {
                                     child: SvgPicture.asset(
                                       Images.iconPromo,
                                       fit: BoxFit.cover,
+                                      color: AppColor.primaryColor,
                                     )),
                                 SizedBox(
                                   width: 14.w,
@@ -103,10 +104,12 @@ class _ApplyOfferCardState extends State<ApplyOfferCard> {
                                         child: SvgPicture.asset(
                                           Images.iconArrowRight,
                                           fit: BoxFit.cover,
+                                          color: AppColor.primaryColor,
                                         ))
                                     : SvgPicture.asset(
                                         Images.iconArrowRight,
                                         fit: BoxFit.cover,
+                                  color: AppColor.primaryColor,
                                       )),
                           ],
                         ),

@@ -1,5 +1,6 @@
 // ignore_for_file: sort_child_properties_last, prefer_const_constructors, unused_element, prefer_collection_literals, prefer_const_constructors_in_immutables, unused_field
 
+import 'dart:collection';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -23,6 +24,7 @@ class _AddPickLocationViewState extends State<AddPickLocationView> {
   LatLng? _initialPosition;
   CameraPosition? _cameraPosition;
   GoogleMapController? _mapController;
+   Set<Marker> _markers = HashSet<Marker>();
 
   final box = GetStorage();
 
@@ -36,6 +38,15 @@ class _AddPickLocationViewState extends State<AddPickLocationView> {
       double.parse(
           Get.find<AddressController>().currentPosition!.longitude.toString()),
     );
+    _markers.add(Marker(
+      icon: BitmapDescriptor.defaultMarker,
+        markerId: MarkerId('Map'),
+        position: LatLng(
+          double.parse(
+              Get.find<AddressController>().currentPosition!.latitude.toString()),
+          double.parse(
+              Get.find<AddressController>().currentPosition!.longitude.toString()),
+        )));
   }
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -51,18 +62,19 @@ class _AddPickLocationViewState extends State<AddPickLocationView> {
               children: [
                 GoogleMap(
                   initialCameraPosition: CameraPosition(
-                      target: controller.pickPosition.latitude != 0
-                          ? LatLng(controller.pickPosition.latitude,
-                              controller.pickPosition.longitude)
-                          : LatLng(controller.pickPosition.latitude,
-                              controller.pickPosition.longitude),
-                      zoom: 17),
-                  zoomControlsEnabled: false,
+                      target: _initialPosition ?? LatLng(double.parse(
+                Get.find<AddressController>().currentPosition!.latitude.toString()),
+              double.parse(
+                  Get.find<AddressController>().currentPosition!.longitude.toString())),
+                      zoom: 18),
+
+                  //zoomControlsEnabled: false,
                   myLocationEnabled: false,
                   compassEnabled: false,
                   indoorViewEnabled: true,
                   mapToolbarEnabled: true,
-                  minMaxZoomPreference: const MinMaxZoomPreference(0, 16),
+                  //minMaxZoomPreference: const MinMaxZoomPreference(0, 16),
+
                   onMapCreated: (GoogleMapController mapController) {
                     _mapController = mapController;
                     controller.getCurrentLocation();
