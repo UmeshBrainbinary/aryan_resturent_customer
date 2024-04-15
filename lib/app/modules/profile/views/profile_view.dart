@@ -575,13 +575,16 @@ class _ProfileViewState extends State<ProfileView> {
             ],
           ),
           SizedBox(
-            height: 14.h,
+            height: 8.h,
           ),
           const Divider(
             thickness: 1,
             endIndent: 10,
             color: AppColor.dividerColor,
           ),
+          SizedBox(
+            height: 8.h,
+          )
         ],
       ),
     );
